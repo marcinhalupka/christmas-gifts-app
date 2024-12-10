@@ -172,5 +172,5 @@ elif "Komu" in menu:
     
 st.sidebar.markdown("## Wesołych Świąt! 🦌🛷☃️")
 # Add Snow Button
-if st.sidebar.button("❄️"):
+if st.sidebar.button("Niech pada śnieg! ❄️"):
     st.snow()
