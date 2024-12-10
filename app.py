@@ -71,7 +71,7 @@ st.markdown("""
 st.sidebar.title("Świąteczna wymiana prezentów 🎄")
 st.text("")
 menu = st.sidebar.selectbox(
-    "Wybierz sekcję:",
+    "Wybierz podstronę:",
     ["🎁 Komu robię prezent?", "📝 Moja lista życzeń", "🎅 Tegoroczni uczestnicy"]
 )
 
@@ -81,6 +81,8 @@ if "Tegoroczni" in menu:
     participants = get_participants()  # Ensure this fetches the latest data
     
     st.title("🎅 Lista uczestników 🤶")
+
+    st.write("Ta strona przedstawia w jednym miejscu wszystkich uczestników wraz z informacją czy przygotowali już swoją listę życzeń. Nie jest interaktywna, tak więc klikanie na poszczególne komórki nie przeniesie nas w żadne inne miejsce - do tego celu wykorzystać trzeba rozwijane menu z lewej strony")
 
     data = [
         {"Uczestnik": p["name"], 
