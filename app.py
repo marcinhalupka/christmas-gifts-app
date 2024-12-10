@@ -13,6 +13,7 @@ from streamlit_card import card
 # Initialize Firebase using secrets
 if not firebase_admin._apps:  # Check if Firebase is already initialized
     cred_dict = st.secrets["firebase_credentials"]  # Fetch credentials from secrets
+    st.write(type(cred_dict))
     cred = credentials.Certificate(cred_dict)  # Use the parsed credentials
     firebase_admin.initialize_app(cred)
 
