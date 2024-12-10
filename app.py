@@ -16,6 +16,7 @@ if not firebase_admin._apps:  # Check if Firebase is already initialized
     # st.write(type(cred_dict))
     cred = credentials.Certificate(cred_dict.to_dict())  # Use the parsed credentials
     firebase_admin.initialize_app(cred)
+db = firestore.client()
 
 def get_participants():
     participants_ref = db.collection("participants")
