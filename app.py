@@ -160,7 +160,7 @@ elif "Komu" in menu:
                 assigned_data = assigned_doc.to_dict()
                 assigned_wishlist = assigned_data.get("wishlist", [])
                 if assigned_wishlist:
-                    st.write(f"### A jej lista życzeń:")
+                    st.write(f"#### A jej lista życzeń:")
                     for item in assigned_wishlist:
                         st.write(f"- {item}")
                 else:
