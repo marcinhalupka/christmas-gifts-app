@@ -69,6 +69,7 @@ st.markdown("""
 
 # Sidebar Navigation
 st.sidebar.title("Świąteczna wymiana prezentów 🎄")
+st.sidebar.empty()
 menu = st.sidebar.selectbox(
     "Wybierz podstronę:",
     ["🎁 Komu robię prezent?", "📝 Moja lista życzeń", "🎅 Tegoroczni uczestnicy"]
