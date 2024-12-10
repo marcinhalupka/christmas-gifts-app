@@ -74,6 +74,8 @@ menu = st.sidebar.selectbox(
     "Wybierz podstronę:",
     ["🎁 Komu robię prezent?", "📝 Moja lista życzeń", "🎅 Tegoroczni uczestnicy"]
 )
+st.sidebar.empty()
+st.sidebar.empty()
 
 # Main Page Logic
 if "Tegoroczni" in menu:
