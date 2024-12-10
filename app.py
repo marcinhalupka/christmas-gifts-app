@@ -3,6 +3,7 @@ import pandas as pd
 import firebase_admin
 from firebase_admin import credentials, firestore
 from streamlit_card import card
+import json
 
 # # Initialize Firebase locally
 # if not firebase_admin._apps:
