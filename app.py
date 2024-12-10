@@ -168,5 +168,8 @@ elif "Komu" in menu:
         else:
             st.error("Nie znalezlismy twojej pary, zgłoś problem na rodzince!")
 
-
+# Add Snow Button
+if st.sidebar.button("Let it Snow! ❄️"):
+    st.snow()
+    
 st.sidebar.markdown("## Wesołych Świąt! 🦌🛷☃️")
