@@ -14,7 +14,7 @@ from streamlit_card import card
 if not firebase_admin._apps:  # Check if Firebase is already initialized
     cred_dict = st.secrets["firebase_credentials"]  # Fetch credentials from secrets
     # cred = credentials.Certificate(cred_dict)  # Use the parsed credentials
-    firebase_admin.initialize_app(cred)
+    firebase_admin.initialize_app(cred_dict)
 
 def get_participants():
     participants_ref = db.collection("participants")
