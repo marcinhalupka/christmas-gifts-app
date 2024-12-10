@@ -140,7 +140,9 @@ elif "Moja" in menu:
                 st.rerun() 
 
 elif "Komu" in menu:
-    st.title("🎁 Sprawdź przypisaną listę")
+    st.title("🎁 Sprawdź komu robisz prezent")
+
+    st.write("Na tej stronie, po wybraniu swojego imienia, dowiesz się dla kogo prezent będziesz przygotowywać oraz co dana osoba ma na swojej liście życzeń - miejmy nadzieję że ułatwi to Tobie zadanie!")
     participants = get_participants()
     participant_names = [p['name'] for p in participants]
     participant_name = st.selectbox("Wybierz swoje imię", participant_names, index=None)
