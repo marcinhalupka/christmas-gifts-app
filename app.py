@@ -82,7 +82,7 @@ if "Tegoroczni" in menu:
     
     st.title("🎅 Lista uczestników 🤶")
 
-    st.write("Ta strona przedstawia w jednym miejscu wszystkich uczestników wraz z informacją czy przygotowali już swoją listę życzeń. Nie jest interaktywna, tak więc klikanie na poszczególne komórki nie przeniesie nas w żadne inne miejsce - do tego celu wykorzystać trzeba rozwijane menu z lewej strony")
+    st.write("Ta strona przedstawia w jednym miejscu wszystkich uczestników wraz z informacją czy przygotowali już swoją listę życzeń. Nie jest interaktywna, tak więc klikanie na poszczególne komórki nie przeniesie nas w żadne inne miejsce - do tego celu wykorzystać trzeba rozwijane menu z lewej strony.")
 
     data = [
         {"Uczestnik": p["name"], 
@@ -99,7 +99,9 @@ if "Tegoroczni" in menu:
 
 
 elif "Moja" in menu:
-    st.title("📝 Stwórz listę życzeń")
+    st.title("📝 Moja lista życzeń")
+
+    st.write("Ta strona sluży za narzędzie do stworzenia swojego listu do Mikołaja. Po wybraniu swojego imienia pokaże się lista ktorą można swobodnie edytować - dodawać nowe pozycje lub usuwać istniejące.")
     participants = get_participants()
     participant_names = [p['name'] for p in participants]
     participant_name = st.selectbox("Wybierz swoje imię", participant_names, index=None)
