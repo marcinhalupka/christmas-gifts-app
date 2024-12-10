@@ -4,11 +4,17 @@ import firebase_admin
 from firebase_admin import credentials, firestore
 from streamlit_card import card
 
-# Initialize Firebase
-if not firebase_admin._apps:
-    cred = credentials.Certificate("firebase_credentials.json")
+# # Initialize Firebase locally
+# if not firebase_admin._apps:
+#     cred = credentials.Certificate("firebase_credentials.json")
+#     firebase_admin.initialize_app(cred)
+# db = firestore.client()
+
+# Initialize Firebase using secrets
+if not firebase_admin._apps:  # Check if Firebase is already initialized
+    cred_dict = json.loads(st.secrets["firebase_credentials"])  # Fetch credentials from secrets
+    cred = credentials.Certificate(cred_dict)  # Use the parsed credentials
     firebase_admin.initialize_app(cred)
-db = firestore.client()
 
 def get_participants():
     participants_ref = db.collection("participants")
