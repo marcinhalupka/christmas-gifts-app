@@ -3,7 +3,6 @@ import pandas as pd
 import firebase_admin
 from firebase_admin import credentials, firestore
 from streamlit_card import card
-import json
 
 # # Initialize Firebase locally
 # if not firebase_admin._apps:
@@ -13,7 +12,7 @@ import json
 
 # Initialize Firebase using secrets
 if not firebase_admin._apps:  # Check if Firebase is already initialized
-    cred_dict = json.loads(st.secrets["firebase_credentials"])  # Fetch credentials from secrets
+    cred_dict = st.secrets["firebase_credentials"]  # Fetch credentials from secrets
     cred = credentials.Certificate(cred_dict)  # Use the parsed credentials
     firebase_admin.initialize_app(cred)
 
