@@ -69,7 +69,6 @@ st.markdown("""
 
 # Sidebar Navigation
 st.sidebar.title("Świąteczna wymiana prezentów 🎄")
-st.empty()
 menu = st.sidebar.selectbox(
     "Wybierz podstronę:",
     ["🎁 Komu robię prezent?", "📝 Moja lista życzeń", "🎅 Tegoroczni uczestnicy"]
@@ -167,9 +166,8 @@ elif "Komu" in menu:
                 st.error(f"{assigned_person} - niestety ta osoba nie istnieje w bazie.")
         else:
             st.error("Nie znalezlismy twojej pary, zgłoś problem na rodzince!")
-
-# Add Snow Button
-if st.sidebar.button("## Wesołych Świąt! 🦌🛷☃️"):
-    st.snow()
     
-# st.sidebar.markdown("## Wesołych Świąt! 🦌🛷☃️")
+st.sidebar.markdown("## Wesołych Świąt! 🦌🛷☃️")
+# Add Snow Button
+if st.sidebar.button("Kliknij mnie"):
+    st.snow()
