@@ -72,11 +72,11 @@ st.sidebar.title("Świąteczna wymiana prezentów 🎄")
 st.text("")
 menu = st.sidebar.selectbox(
     "Wybierz sekcję:",
-    ["🎅 Uczestnicy", "📝 Stwórz listę życzeń", "🎁 Sprawdź przypisaną listę"]
+    ["🎁 Komu robię prezent?", "📝 Moja lista życzeń", "🎅 Tegoroczni uczestnicy"]
 )
 
 # Main Page Logic
-if "Uczestnicy" in menu:
+if "Tegoroczni" in menu:
     # Fetch participants (replace with Firestore fetching logic if applicable)
     participants = get_participants()  # Ensure this fetches the latest data
     
@@ -96,7 +96,7 @@ if "Uczestnicy" in menu:
     st.dataframe(df, use_container_width=True, hide_index=True)
 
 
-elif "Stwórz" in menu:
+elif "Moja" in menu:
     st.title("📝 Stwórz listę życzeń")
     participants = get_participants()
     participant_names = [p['name'] for p in participants]
@@ -135,7 +135,7 @@ elif "Stwórz" in menu:
                 st.toast("✅ Pozycja dodana!")
                 st.rerun() 
 
-elif "Sprawdź" in menu:
+elif "Komu" in menu:
     st.title("🎁 Sprawdź przypisaną listę")
     participants = get_participants()
     participant_names = [p['name'] for p in participants]
