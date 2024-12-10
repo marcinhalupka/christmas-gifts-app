@@ -101,7 +101,7 @@ if "Tegoroczni" in menu:
 elif "Moja" in menu:
     st.title("📝 Moja lista życzeń")
 
-    st.write("Ta strona służy za narzędzie do stworzenia swojego listu do Mikołaja. Po wybraniu swojego imienia pokaże się lista ktorą można swobodnie edytować - dodawać nowe pozycje lub usuwać istniejące.")
+    st.write("Ta strona służy za narzędzie do stworzenia swojego listu do Świętego Mikołaja. Po wybraniu swojego imienia pokaże się lista ktorą można swobodnie edytować - dodawać nowe pozycje lub usuwać istniejące.")
     participants = get_participants()
     participant_names = [p['name'] for p in participants]
     participant_name = st.selectbox("Wybierz swoje imię", participant_names, index=None)
