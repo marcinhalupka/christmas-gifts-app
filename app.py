@@ -57,14 +57,6 @@ st.markdown("""
 
 st.markdown("""
 <style>
-    .disable-pointer {
-        pointer-events: none; 
-    }
-</style>
-""", unsafe_allow_html=True)
-
-st.markdown("""
-<style>
     .bottom-content {
         display: flex;
         justify-content: flex-end;
@@ -129,9 +121,7 @@ elif "Moja" in menu:
         for idx, item in enumerate(current_wishlist):
             col1, col2 = st.columns([3, 2], vertical_alignment="bottom")
             with col1:
-                st.markdown('<div class="disable-pointer">', unsafe_allow_html=True)
                 new_value = st.text_input(f"Pozycja {idx+1}", value=item, key=f"edit_{idx}", disabled=False)
-                st.markdown('</div>', unsafe_allow_html=True)
 
             with col2:
                 # st.markdown('<div class="bottom-content">', unsafe_allow_html=True)
